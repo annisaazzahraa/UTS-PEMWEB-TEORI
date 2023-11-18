@@ -1,0 +1,37 @@
+Nama : Annisa Azzahra S
+NIM : 22416255201194
+Kelas : IF22A
+
+1. Apa yang dimaksud dengan framework pada pengembangan aplikasi?
+(jelaskan dengan bahasa yang mudah dimengerti, bukan secara
+harfiah/istilah)
+  jawab: 
+Bayangkan jika Anda ingin membangun sebuah rumah. Sebelum Anda mulai membangunnya, Anda membutuhkan rencana yang jelas tentang bagaimana rumah itu akan terlihat, 
+bagaimana ruangannya tersusun, dan material apa yang akan digunakan. Framework pada pengembangan aplikasi itu seperti rencana tersebut untuk rumah.
+
+2.  Sebutkan tema proyek yang sedang digarap!
+  jawab:
+saya dan kelompok saya mendapatkan proyek tentang Desa.
+
+2.1 Sebutkan anggota dari proyek yang sedang digarap, berikut dengan
+  jobdesk dari masing-masing anggota!
+
+  jawab:
+- Annisa Azzahra S (22416255201194)
+Jobdesk: FrontEnd
+- Haris Hafizni Pramudya (22416255201267)
+Jobdesk: BackEnd
+- Alfian Araviranata (22416255201213)
+Jobdesk: Analisis sistem
+
+2.2 Jelaskan permasalahan yang didapat setelah hasil wawancara dengan
+   client, beserta hipotesa solusi yang kalian usung!
+
+  jawab:
+Setelah wawancara dengan klien, kami menemukan bahwa banyak warga desa kesulitan mengakses, informasi publik, seperti pelayanan kesehatan, dan pengumuman penting. Mereka juga merasa sulit untuk memberikan masukan 
+atau melaporkan masalah kepada pemerintah desa. Hipotesa solusi yang kami ajukan adalah menciptakan sebuah sistem yang mengintegrasikan semua informasi ke dalam satu tempat yang mudah diakses oleh 
+semua warga dan informasi penting dapat disebarkan dengan lebih efisien. Selain itu, kami berencana untuk menyertakan fitur umpan balik dan pelaporan masalah sehingga warga dapat berpartisipasi lebih aktif dalam pengembangan desa mereka.
+
+3. Terdapat file show.php di root proyek yang menghasilkan tabel data produk,
+Didalam nya terdapat fitur “EDIT” dan “HAPUS”. Buatkan fitur “EDIT” dan
+“HAPUS” dan unggah source code di elearning/BOC!
