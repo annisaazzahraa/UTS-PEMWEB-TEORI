@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 require './../config/db.php';
 
 if(isset($_POST['submit'])) {
@@ -13,14 +11,19 @@ if(isset($_POST['submit'])) {
     $password = $_POST['password'];
     $confirm = $_POST['confirm'];
 
-    if($confirm != $password) {
-        echo "password tidak sesuai dengan konfirmasi password";
-        die;
-    }
+    // if($confirm != $password) {
+    //     echo "password tidak sesuai dengan konfirmasi password";
+    //     die;
+    // }
 
     $usedEmail = mysqli_query($db_connect,"SELECT email FROM users WHERE email = '$email'");
     if(mysqli_num_rows($usedEmail) > 0) {
-        echo "email sudah digunakan";
+        echo "
+        <script>
+        alert('Email $email sudah digunakan!')
+        window.location = '../register.php'
+        </script>
+        ";
         die;
     }
 
@@ -29,13 +32,21 @@ if(isset($_POST['submit'])) {
         
     $users = mysqli_query($db_connect,"INSERT INTO users (name,email, password,created_at) VALUES
                             ('$name','$email','$password','$created_at')");
+    
+    $getUserData = mysqli_query($db_connect, "SELECT name, role FROM users WHERE email = '$email'");
+    $sessionData = mysqli_fetch_assoc($getUserData);
 
-    $getUserData = mysqli_query($db_connect,"SELECT name,role FROM users WHERE email = '$email' " );   
-    $sessionData =  mysqli_fetch_assoc($getUserData);
+    //Otorisasi
     $_SESSION['name'] = $sessionData['name'];
     $_SESSION['role'] = $sessionData['role'];
-    
-    print_r($getUserData);
-    header('Location:./../profile.php');
+    // print_r($_SESSION['role']);
+    echo "
+        <script>
+        alert('Selamat $name akun anda berhasil dibuat!')
+        window.location = '../index.php'
+        </script>
+        ";
+    // header("location:./../profile.php");
+
     // echo "registrasi berhasil";
 }
